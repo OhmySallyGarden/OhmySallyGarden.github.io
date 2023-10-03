@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules | 扎西德勒</title><meta name="author" content="hitero"><meta name="copyright" content="hitero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="There is a famous joke widely told among economists: One day an economics professor and his student were strolling down  the  street  and  they  came  upon  a ¥100 bill  lying  on  the ground,  and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules">
+<meta property="og:url" content="https://hitero.cn/posts/23362.html">
+<meta property="og:site_name" content="扎西德勒">
+<meta property="og:description" content="There is a famous joke widely told among economists: One day an economics professor and his student were strolling down  the  street  and  they  came  upon  a ¥100 bill  lying  on  the ground,  and">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hitero.cn/images/pasted-50.png">
+<meta property="article:published_time" content="2023-07-27T07:34:00.000Z">
+<meta property="article:modified_time" content="2023-10-03T05:43:07.853Z">
+<meta property="article:author" content="hitero">
+<meta property="article:tag" content="论文复现">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hitero.cn/images/pasted-50.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hitero.cn/posts/23362.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-03 13:43:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/pasted-50.png')"><nav id="nav"><span id="blog-info"><a href="/" title="扎西德勒"><span class="site-name">扎西德勒</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-27T07:34:00.000Z" title="发表于 2023-07-27 15:34:00">2023-07-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-03T05:43:07.853Z" title="更新于 2023-10-03 13:43:07">2023-10-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>There is a famous joke widely told among economists: One day an economics professor and his student were strolling down  the  street  and  they  came  upon  a ¥100 bill  lying  on  the ground,  and  as  the  student  reached  down  to  pick  it  up,  the professor said: “Don’t bother —- if it were a genuine ¥100 bill, someone would have already picked it up”.</p>
+<p>The story ended something like this: The student picked up the ¥100 bill and whispered to the professor: “I am the ‘someone’ you were talking about, Sir.” </p>
+</blockquote>
+<p>本文复现了王立新教授的论文：<strong><em>Dynamical Models of Stock Prices Based on Technical Trading Rules(PART1~PART3)</em></strong> </p>
+<div align="center">
+    *** 文中的latex公式未被渲染器识别渲染，还需要修改 ***
+</div>
+
+
+<p>PART1主要介绍了技术分析方法，并以模糊函数的形式将语言形式的技术分析方法公式化，将其引入价格动态方程；PART2介绍了动态价格模型，模拟以技术分析作为交易策略的情况下，股票价格的动态变化；PART3中作者依据其价格动态方程，提出了两种交易策略（FollowBB以及RideMood），并将其应用到香港股市（2007～2014）中。</p>
+<p>作者选择香港top20的银行以及房地产股票用来测试其策略，并与benchmark的结果进行了对比。从结果上来看，FollowBB策略以及RideMood策略均可获得超额收益。值得一提的是，作者并未提及其选股策略以及模型参数优化策略，仅依靠统一的非特定的模型参数便可以在未经特别筛选的股票池中得到超额收益。论文复现代码请见➡️<a target="_blank" rel="noopener" href="https://github.com/OhmySallyGarden/followBB">(code)</a>。</p>
+<h1 id="策略模型"><a href="#策略模型" class="headerlink" title="策略模型"></a>策略模型</h1><h2 id="三个基本假设"><a href="#三个基本假设" class="headerlink" title="三个基本假设"></a>三个基本假设</h2><p><strong><em>假设1:股票价格主要由机构投资者的行为决定，大买家或大卖家，即庄家。</em></strong></p>
+<p>因此，作者的策略就是跟踪要跟踪大买家/卖家。可用的信息并不多，只能通过某种方法，从嘈杂的价格数据来发现他们。这似乎是不可能完成的任务，因为这些大投资者的主要任务是通过实施各种复杂的策略来迷惑或误导其他交易者，从而尽可能地隐藏自己的意图。但是，在所有这些千变万化的策略之上，有一点几乎是确定无疑的（至少港股是符合的）：大买家（卖家）必须在合理的时间内买入（卖出）大量股票，价格不能比做出买入（卖出）决定时的市场价格高（低）太多。大买家和大卖家面临的主要问题是，在任何时候可出售的股票数量和可购买股票的资金都非常有限，因此，大买家和大卖家别无选择，只能在持续数周甚至数月的时间内逐步（一点一点）买入或卖出股票。从统计学角度看，大买家和大卖家的这些行为使得股票的符号收益成为一个长记忆过程—符号收益的自相关函数衰减得非常慢—这是金融学中一个众所周知的典型事实。而且，这些持续的买入或卖出行为使得我们有机会发现大买家和大卖家的存在，并对其进行跟踪。  </p>
+<p>为了能够监测到庄家的行为，必须分析庄家在什么情况下会进行买/卖操作。考虑价格上涨的情况（当前价格高于过去价格的移动平均值），如果大买家在这种情况下仍然买入，价格将进一步上涨，导致大买家的成本增加（以更高的价格买入股票）。同样，如果大卖家在价格下跌时仍然卖出，价格会进一步下跌，导致大卖家的成本大幅增加（以较低的价格卖出股票）。所以，大买家和大卖家必须（或多或少）适应以下交易启发式原则：</p>
+<p><strong><em>Big Buyer Heuristic</em></strong>：对于大买家来说，如果股价下跌，就买入：跌幅越大，买单越大。当价格上涨或横向移动时，保持中立。</p>
+<p><strong><em>Big Seller Heuristic</em></strong>：对于大卖家，如果股价上涨，就卖出：涨幅越大，卖出指令越大。  当价格下跌或水平移动时，保持中立。  </p>
+<p><strong><em>假设2:大买家（大卖家）在实际交易中使用上述启发式原则。</em></strong><br>为了进一步证明大买家启发式和大卖家启发式的正确性，作者在下文中引用Walter  Deemer在接受Andrew Lo采访时所说的话：</p>
+<blockquote>
+<p>When I went to work for Putnam Investments in 1970, in my very early days, I told one of the big fund managers that IBM had just broken out. “Fine, but I can’t buy it,” he said. “It’s already broken out and moving, the price is rallying. I can’t really buy it in size. So what I need you to do is tell me before it breaks out.” So I went back to my office and spent quite a bit  of  time  working  on  that, but  I  soon  found out  that  when you’re dealing with major institutions, managing large sums of money,  you need to tell them that the only time they can really buy in quantity is during the decline, and the only time they can really sell in quantity is in a rally. </p>
+</blockquote>
+<p>基于假设1和假设2，作者基本思路如下：首先，利用模糊系统理论，将大买家和大卖家启发式转换为价格动态模型，该模型描述了当大买家和大卖家成为市场主导力量时的股价动态。然后，根据真实的股票价格数据，利用控制理论中开发的一些参数估计算法，估计价格动态模型中代表大买家和大卖家力量的参数。最后，根据估算的强度参数制定了两种交易策略—跟随大买家（FollowBB）和驾驭情绪（RideMood）。FollowBB 策略的基本思想是，一旦发现大买家，同时又没有发现大卖家，就立即买入股票，并在大买家停止买入时卖出股票。RideMood 策略的基本思想是，一旦大买方的力量大于大卖方的力量，就立即买入股票，反之则卖出股票。</p>
+<p>在什么样的市场条件下，FollowBB 和 RideMood 策略有可能赚钱？除了假设1 和假设2之外，我们还可以从这两种策略的基本思想中看出，当市场上出现一个占主导地位的大买家时，这两种策略就有可能赚钱。事实上，如果有许多大买家和大卖家在同一时间交易股票，那么就很难预测谁会赢，也就很难决定股价的命运。如果每个人都是大户，那么相比之下就没有人是大户了。我们可以用拳击做个类比：如果所有拳手都是重量级选手，那么就很难预测谁会在比赛中获胜；但是，如果重量级选手与中量级选手交手，我们就能更确定谁会获胜。把这个类比回到股票交易中，作者的第三个假设如下：</p>
+<p><strong><em>假设3:在某些股票的某些时段，有一个占主导地位的大买家在交易该股票。(当然，我们不知道大买家在什么时间段交易哪些股票；我们交易策略的任务就是找到这样的股票和这样的时间段）。。</em></strong></p>
+<p>在什么样的股市中，对于什么样的股票，假设3最有可能成立？答案是：”hot money”瞄准的股票市场和股票。作者认为，在香港股市，假设1至假设3很有可能成真。首先，香港是世界主要金融中心之一，所有主要金融公司都在香港设有办事处，因此我们可以肯定地说，假设1在香港股市是成立的。其次，香港证券交易所是一个纯粹的电子限价盘市场（没有场外交易设施），而且香港社会有严格遵守法律的传统（台面下交易很少见，而且执法力度很强），因此大宗交易必须直接进入限价盘，因此假设2最有可能成立。第三，由于 a) 香港多年来一直是全球顶级的自由市场（对资本的流入和流出没有限制），b) 香港的税率很低，c) 中国大多数大公司都在香港联合交易所上市，因此具有 “中国概念 “的基金可以到香港进行交易（中国大陆的资本市场并不对外国投资者自由开放），因此香港股市对 “热钱 “具有吸引力（例如索罗斯的广达基金就在香港联合交易所上市了一只股票）。结果是，假设3的市场条件预计会在香港股市频繁出现。因此，作者将香港股市作为测试交易策略的第一站。</p>
+<h2 id="技术分析策略模糊函数化"><a href="#技术分析策略模糊函数化" class="headerlink" title="技术分析策略模糊函数化"></a>技术分析策略模糊函数化</h2><h3 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h3><p>大买家和大卖家都是机构交易者，他们管理着大笔资金，通常希望买入或卖出大量股票。由于在交易价格附近报价或要价的股票数量通常很少，因此必须将大额买入或卖出指令切割成小块，并在很长一段时间内逐步执行。对于大买家（卖家）来说，合理的策略是在价格下跌（上涨）时买入（卖出）；由此可以得出以下启发式原则：<br>启发式6：对于大卖家来说，如果股价上涨，就卖出：涨幅越大，卖单就越大。如果股价下跌或横向移动，则保持中立。<br>启发式7：对于大买家来说，如果股价下跌，就买入：跌幅越大，买单越大。如果价格上涨或水平移动，则保持中立。  </p>
+<h2 id="模型构建与参数估计"><a href="#模型构建与参数估计" class="headerlink" title="模型构建与参数估计"></a>模型构建与参数估计</h2><h3 id="价格动态方程"><a href="#价格动态方程" class="headerlink" title="价格动态方程"></a>价格动态方程</h3><p>作者的基本思想是利用模糊系统理论将技术交易规则转换为超额需求（需求减去供给）函数，然后利用这些函数驱动价格动态。具体来说，考虑一只股票在时间点t的价格为$p<em>t$ ，其中$t=0,1,2,….$。假设有$M$组交易者从$t$到$t+1$期间都在交易这只股票，且每组交易者都使用相同的技术交易规则。将一个组（例如组）的技术交易规则转换为单一的超额需求函数$ed</em>{i}(x_{t})$，可以得到如下的价格动态模型：</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+\ln(p_{t+1})=\ln(p_t)+\sum_{i=1}^Ma_i(t)ed_i(x_t)
+\end{equation}</script><p>其中，$a<em>i(t)$系数表示群体$i$中的交易者在$t$到$t+1$之间价格相对变化中的交易强度，$x_t$是根据过去的价格和t时间的其他信息计算出的变量。$a_i(t)$是时变系数（代表不断变化的市场），$a_i(t)=0$表示第i个群体的超额需求在时间t不存在。$a_i(t)$可以根据股价数据${p</em>{t+1},p<em>{t},p</em>{t-1},\ldots}$确定。</p>
+<h3 id="隶属函数"><a href="#隶属函数" class="headerlink" title="隶属函数"></a>隶属函数</h3><p>为了将技术交易规则转换为超额需求函数，首先需要定义模糊集来表征技术交易规则中使用的词语，从而使这些技术规则成为模糊系统理论框架下的模糊 IF-THEN 规则。然后，利用标准模糊逻辑原理将这些模糊 IF-THEN 规则组合成模糊系统，即价格动态方程中的超额需求$ed<em>{i}(x</em>{t})$。  </p>
+<p>为了将启发式6和7转化为模糊系统理论，作者首先定义了模糊集，以明确”正且大”、”负且小 “等价格百分比变化语言描述的含义。七个模糊集分别为：”正小（PS）”、”正中（PM）”、”正大（PL）”、”负小（NS）”、”负中（NM）”、”负大（NL）”和 “零附近（AZ）”，其隶属函数如下图所示。例如，模糊集PS（正小）的隶属函数为</p>
+<div align="center">
+    <img src="/images/pasted-39.png" alt="模糊集PS（正小）的隶属函数" width = 50%>
+</div>
+
+<div align="center">
+    <img src="/images/pasted-41.png" alt="模糊集的隶属函数， 正小（PS）、正中（PM）、正大（PL）、负小（NS）、负中（NM）、负大（NL）和零点附近（AZ）" width = 50%>
+ </div>
+
+<p>$w$是一个正常数,当我们用这些词来描述价格变化时，$w$的值决定了”小”是多小，”中”是多中，”大”是多大。例如，$w =0.01$意味着在交易者的心目中，从 ${\bar{p}}_{t,n}$到 ${\bar{p}}_{t,m}（n&gt;m）$之间1%左右的变化意味着”小”，而 “中”意味着2%左右，”大”意味着3%左右或以上，$w$是影响价格动态变化的一个重要参数。</p>
+<p>接下来，还需要定义模糊集，以明确买入（卖出）信号语言描述的含义。假设$ed$是买入或卖出信号的强度，其中$ed$代表超额需求（需求-供应），可以为正也可以为负。作者给$ed$定义了七个模糊集：”买小（BS）”、”买中（BM）”、”买大（BB）”、”卖小（SS）”、”卖中（SM）”、”卖大（SB）”和”中立（N）”，其隶属函数如下所示。例如，BM（买入中等）的隶属函数为:</p>
+<div align="center">
+    <img src="/images/pasted-40.png" alt="模糊集BM(买中)的隶属函数" width = 50%>
+</div>
+
+<p>“小买”、”中买 “和 “大买 “分别意味着使用约10%、20%和40%的买入力量。也可以选择其他数字来反映不同交易者的偏好。</p>
+<div align="center">
+    <img src="/images/pasted-42.png" alt="针对需求过剩的模糊集买入小 (BS)、买入中 (BM)、买入大 (BB)、卖出小 (SS)、卖出中 (SM)、卖出大 (SB) 和中立 (N) 的隶属函数" width = 50%>
+</div>
+
+<p>至此，我们可以使用上述隶属函数将技术分析中的启发式6以及7转化为IF-THEN rules，并以此来刻画超额需求$ed$。<br>对于大卖家，启发式6的IF-THEN rules：</p>
+<p>Rule $6<em>1$: IF $x</em>{1,t}^{(1,n)}$ is Positive Small (PS), THEN $ed_6$ is Sell Small (SS)</p>
+<p>Rule $6<em>2$: IF $x</em>{1,t}^{(1,n)}$ is Positive Medium (PM), THEN $ed_6$ is Sell Medium (SM) </p>
+<p>Rule $6<em>3$: IF $x</em>{1,t}^{(1,n)}$ is Positive Large (PL), THEN $ed_6$ is Sell Big (SB)</p>
+<p>Rule $6<em>4$: IF  $x</em>{1,t}^{(1,n)}$  is Around Zero (AZ), THEN $ed_6$ is Neutral (N) </p>
+<p>对于大买家，启发式7的IF-THEN rules：</p>
+<p>Rule $7<em>1$: IF $x</em>{1,t}^{(1,n)}$ is Negative Small (NS), THEN $ed_7$ is Buy Small (BS) </p>
+<p>Rule $7<em>2$: IF $x</em>{1,t}^{(1,n)}$ is Negative Medium (NM), THEN $ed_7$ is Buy Medium (BM) </p>
+<p>Rule $7<em>3$: IF $x</em>{1,t}^{(1,n)}$ is Negative Large (NL), THEN $ed_7$ is Buy Big (BB)     </p>
+<p>Rule $7<em>4$: IF  $x</em>{1,t}^{(1,n)}$ is Around Zero (AZ), THEN $ed_7$ is Neutral (N) </p>
+<p>基于此，我们可以得到超额需求（ed）的函数表达式：</p>
+<div align="center">
+    <img src="/images/pasted-44.png" alt="超额需求函数表达式" width = 50%>
+</div>
+
+<p>超额需求函数的如图所示：</p>
+<div align="center">
+    <img src="/images/pasted-45.png" alt="超额需求函数" width = 50%>
+</div>
+
+<p>据此，我们可以得到价格动态模型：$\ln(p<em>{t+1})=\ln(p_t)+a_6(t)ed_6\big(x_t^{(1,n)}\big)+a_7(t)ed_7\big(x_t^{(1,n)}\big)+\varepsilon(t)$<br> 其中，$p_t$是该股票在时间点的价格，$ed_6(ed_7)$是大卖家（大买家）的超额需求，$a_6(a_7)$是大卖家（大买家）的强度参数，$\varepsilon$是除大卖家和大买家之外的其他交易者对价格的影响，$x_t^{(1,n)}$是价格$p_t$与$p_t$n天移动均值的比值：$ x_t^{(1,n)}=\ln（\frac{p_t}{\frac{1}{n}\sum\</em>{i=0}^{n-1}p_{t-i } }）$</p>
+<h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><p>得到价格动态模型后，首先需要根据股票价格，估计关键的交易强度参数$a_6(t)$和$a_7(t)$。</p>
+<p>作者使用的是带有指数遗忘的标准最小二乘回归方法，该估计方法估计缓慢时变参数比较好用，参数的更新迭代公式如下：</p>
+<div align="center">
+$\widehat{a}_{t} =\hat{a}_{t-1}+K_{t}(r\_{t+1}-ed_{t}^{T}\hat{a}_{t-1})$
+
+$K_{t} =\frac{P_{t-1}ed_{t}}{(ed_{t}^{T}P_{t-1}ed_{t}+\lambda)}$
+
+$P_{t} =(I-K_{t}ed_{t}^{T})P_{t-1}/\lambda $
+</div>
+
+
+<h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><p>交易策略也根据$a_6(t)$和$a_7(t)$两个关键参数进行设计，基于以下三个论点：</p>
+<ul>
+<li>$a_6(t)$为正数，意味着存在大卖家；</li>
+<li>$a_7(t)$为正数，意味着存在大买家；</li>
+<li>$a_7(t) &gt; a_6(t)$表示价格处于上升模式；$a_7(t)&lt;a_6(t)$表示价格处于下降模式。 </li>
+</ul>
+<h3 id="FollowBB"><a href="#FollowBB" class="headerlink" title="FollowBB"></a>FollowBB</h3><p><strong><em>Follow-the-Big-Buyer (FollowBB)</em></strong>: 一旦$a_7(t)$变为正数且$a_6(t)$变为负数（这意味着有大买家到来，没有大卖家），就买入股票；只要股价仍为正数，就持有股票（这意味着只要大买家仍在买入股票，就不要卖出股票，不管股价发生什么变化，也不管是否有大卖家；坚定地与你的大买家站在一起）；一旦$a_7(t)$变为负数，就卖出股票（如果你的大买家停止买入，就退出）；买入-卖出循环结束，并注意开始下一个循环。</p>
+<div align="center">
+    <img src="/images/pasted-46.png" alt="FollowBB策略" width = 40%>
+</div>
+
+<h3 id="RideMood"><a href="#RideMood" class="headerlink" title="RideMood"></a>RideMood</h3><p><strong><em>Ride-the-Mood  (RideMood)</em></strong>:一旦$a_7(t) - a_6(t)$变为正数（意味着大买家比大卖家占上风），就买入股票；只要$a_7(t) - a_6(t)$仍为正数，就持有股票；一旦$a_7(t) - a_6(t)$变为负数（意味着大卖家比大买家更强势），就卖出股票；买入卖出循环结束，并关注下一个循环。<br>截屏2023-09-27 下午4.39.44</p>
+<div align="center">
+    <img src="/images/pasted-47.png" alt="RideMood策略" width = 40%>
+</div>
+
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="场景选择"><a href="#场景选择" class="headerlink" title="场景选择"></a>场景选择</h2><p>作者将四种交易策略FollowBB、RideMood、TrendFL 和 Buy&amp;Hold策略应用于香港联交所上市的前 20 大银行股和地产股的每日收盘价。TrendFL 和 Buy&amp;Hold策略是benchmark策略，这里不做赘述。</p>
+<p>作者之所以选择这些top银行股和地产股，是因为它们通常是”hot money”的目标，因为它们代表了香港和中国的经济状况。使用这20只股票在2007年7月3日至2014年7月2日这七年期间的每日收盘价数据来测试交易策略。  </p>
+<p>由于这一时期的市场行情瞬息万变的每日收盘价，其中包括：1）2007 年底的强劲上涨；2) 2008 年金融危机导致的大幅下跌，3) 恐慌过后的恢复性上涨，4) 2010～2014年的较为稳定的时期。因此，2007～2014年的数据提供了一个在不同市场条件下测试交易策略的好机会。  </p>
+<h2 id="收益分析"><a href="#收益分析" class="headerlink" title="收益分析"></a>收益分析</h2><p>作者提出了一个非常简单的投资组合方案：根据20只股票在恒生指数中的权重，将初始资金分配给这20只股票，并针对每只股票独立运行交易策略（FollowBB、RideMood、TrendFL 或 Buy&amp;Hold），直至投资组合结束。从收益结果来看，FollowBB策略以及RideMood策略均可获得超额收益，且夏普率较高。</p>
+<div align="center">
+    <img src="/images/pasted-48.png" alt="策略收益" width = 40%>
+</div>
+
+<div align="center">
+    <img src="/images/pasted-49.png" alt="每日投资组合市值（2007～2014）" width = 40%>
+</div>
+
+<h2 id="买卖周期细节"><a href="#买卖周期细节" class="headerlink" title="买卖周期细节"></a>买卖周期细节</h2><p>下图显示了FollowBB策略在HK0016上的买卖细节（2011年1月2日至2013年12月31日），上图显示的被绿线以及红线框住的为一个买卖周期，绿线为买入点，红线为卖出点。下图中绿、红、黄色线线分别代表了大买家、大卖家以及趋势跟随者的交易强度。</p>
+<div align="center">
+    <img src="/images/pasted-50.png" alt="买卖周期（HK0016）" width = 60%>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://hitero.cn">hitero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hitero.cn/posts/23362.html">https://hitero.cn/posts/23362.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hitero.cn" target="_blank">扎西德勒</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0/">论文复现</a></div><div class="post_share"><div class="social-share" data-image="/images/pasted-50.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/28467.html" title="旅游景区高物价的行为经济学分析"><img class="cover" src="/img/cover/7.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">旅游景区高物价的行为经济学分析</div></div></a></div><div class="next-post pull-right"><a href="/posts/46711.html" title="读书笔记@《Out of Gobi》"><img class="cover" src="/img/cover/5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">读书笔记@《Out of Gobi》</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">hitero</div><div class="author-info__description">保持健康，保持学习，保持善良</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/OhmySallyGarden"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+var sentence = document.querySelector("#poem_sentence")
+var author = document.querySelector("#poem_author")
+var dynasty = document.querySelector("#poem_dynasty")
+
+var sentenceText = result.data.content
+sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+sentence.innerHTML = sentenceText
+dynasty.innerHTML = result.data.origin.dynasty
+author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">策略模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%9F%BA%E6%9C%AC%E5%81%87%E8%AE%BE"><span class="toc-number">1.1.</span> <span class="toc-text">三个基本假设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E7%AD%96%E7%95%A5%E6%A8%A1%E7%B3%8A%E5%87%BD%E6%95%B0%E5%8C%96"><span class="toc-number">1.2.</span> <span class="toc-text">技术分析策略模糊函数化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">技术分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-number">1.3.</span> <span class="toc-text">模型构建与参数估计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%B7%E6%A0%BC%E5%8A%A8%E6%80%81%E6%96%B9%E7%A8%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">价格动态方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%B6%E5%B1%9E%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">隶属函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-number">1.3.3.</span> <span class="toc-text">参数估计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%96%E7%95%A5"><span class="toc-number">1.4.</span> <span class="toc-text">策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FollowBB"><span class="toc-number">1.4.1.</span> <span class="toc-text">FollowBB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RideMood"><span class="toc-number">1.4.2.</span> <span class="toc-text">RideMood</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E9%80%89%E6%8B%A9"><span class="toc-number">2.1.</span> <span class="toc-text">场景选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E7%9B%8A%E5%88%86%E6%9E%90"><span class="toc-number">2.2.</span> <span class="toc-text">收益分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E5%8D%96%E5%91%A8%E6%9C%9F%E7%BB%86%E8%8A%82"><span class="toc-number">2.3.</span> <span class="toc-text">买卖周期细节</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/13669.html" title="行为经济学思想及理论"><img src="/img/cover/9.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="行为经济学思想及理论"/></a><div class="content"><a class="title" href="/posts/13669.html" title="行为经济学思想及理论">行为经济学思想及理论</a><time datetime="2023-09-14T13:35:00.000Z" title="发表于 2023-09-14 21:35:00">2023-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/51488.html" title="读书笔记@《少有人走的路》"><img src="/img/banner.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读书笔记@《少有人走的路》"/></a><div class="content"><a class="title" href="/posts/51488.html" title="读书笔记@《少有人走的路》">读书笔记@《少有人走的路》</a><time datetime="2023-09-12T01:46:00.000Z" title="发表于 2023-09-12 09:46:00">2023-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/28467.html" title="旅游景区高物价的行为经济学分析"><img src="/img/cover/7.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="旅游景区高物价的行为经济学分析"/></a><div class="content"><a class="title" href="/posts/28467.html" title="旅游景区高物价的行为经济学分析">旅游景区高物价的行为经济学分析</a><time datetime="2023-09-01T08:17:00.000Z" title="发表于 2023-09-01 16:17:00">2023-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/23362.html" title="论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules"><img src="/images/pasted-50.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules"/></a><div class="content"><a class="title" href="/posts/23362.html" title="论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules">论文复现：Dynamical Models of Stock Prices Based on  Technical Trading Rules</a><time datetime="2023-07-27T07:34:00.000Z" title="发表于 2023-07-27 15:34:00">2023-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/46711.html" title="读书笔记@《Out of Gobi》"><img src="/img/cover/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读书笔记@《Out of Gobi》"/></a><div class="content"><a class="title" href="/posts/46711.html" title="读书笔记@《Out of Gobi》">读书笔记@《Out of Gobi》</a><time datetime="2023-06-30T02:09:00.000Z" title="发表于 2023-06-30 10:09:00">2023-06-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By hitero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script src="/js/font.js"></script><script src="/js/jquery.js"></script><script src="/js/foot.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/poem.css"><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
