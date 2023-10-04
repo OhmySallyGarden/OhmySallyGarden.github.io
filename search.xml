@@ -70,9 +70,9 @@
       
         <tags>
             
-            <tag> 旅游 </tag>
-            
             <tag> 行为经济学 </tag>
+            
+            <tag> 旅游 </tag>
             
         </tags>
       
@@ -232,22 +232,22 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>目前，我和我的夫人生活在云南省红河哈尼族彝族自治州。2020年，我从中国科学院自动化研究所<a href="http://www.ia.cas.cn/">（CASIA）</a>硕士毕业。2017年，我从哈尔滨工业大学（威海）电子信息工程专业毕业。我喜欢宠物、音乐以及运动。我和我的夫人养了一只猫（囧囧），是在2019年5月从师兄那领养来的。</p><ul><li>邮箱: lyl_hiter@outlook.com<div align=left><img src="/images/pasted-0.png" width = 45%>  </div><br><div style="color:orange; border-bottom: 1px solid #d9d9d7;display: inline-block;color: #999;padding: 2px;">2023年2月 于 北京</div></li></ul><h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>2023年，我从军工单位辞职，离开了生活了大约6年的北京，申请读博。两年半的工作经历，令我开始思考自己在未来想做什么样的事情，过什么样的生活。我认为，写博客是对自己的生活进行思考，是一种把生活“吐出来再嚼一嚼”的方式，这是我建立博客的初衷。</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>目前，我和我的夫人生活在云南省红河哈尼族彝族自治州。2020年，我从中国科学院自动化研究所<a href="http://www.ia.cas.cn/">（CASIA）</a>硕士毕业。2017年，我从哈尔滨工业大学（威海）电子信息工程专业毕业。我喜欢宠物、音乐以及运动。我和我的夫人养了一只猫（囧囧），是在2019年5月从师兄那领养来的。</p><ul><li>邮箱: lyl_hiter@outlook.com<div align=left><img src="/images/pasted-0.png" width = 45%>  </div><br><div style="color:orange; border-bottom: 1px solid #d9d9d7;display: inline-block;color: #999;padding: 2px;">2023年2月 于 北京</div></li></ul><h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>2023年，我从军工单位辞职，离开了生活了大约6年的北京，申请读博。两年半的工作经历，令我开始思考自己在未来想做什么样的事情，过什么样的生活。我认为，写博客是对自己的生活进行思考，是一种把生活“吐出来再嚼一嚼”的方式，这是我建立博客的初衷。</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
